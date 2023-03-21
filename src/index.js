@@ -19,7 +19,7 @@ ref.input.addEventListener('input', debounce(searchCountry, DEBOUNCE_DELAY));
 function searchCountry(e) {
   const trimValue = ref.input.value.trim();
 
-  cleanHtml();
+  clearHtml();
   if (trimValue !== '') {
     fetchCountries(trimValue).then(data => {
       if (data.length > 10) {
@@ -70,7 +70,7 @@ function createCountry(countries) {
   ref.inform.innerHTML = markup;
 }
 
-function cleanHtml() {
+function clearHtml() {
   ref.list.innerHTML = '';
   ref.inform.innerHTML = '';
 }
