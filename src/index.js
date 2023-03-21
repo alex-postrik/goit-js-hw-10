@@ -13,7 +13,7 @@ const ref = {
   list: document.querySelector('.country-list'),
   inform: document.querySelector('.country-info'),
 };
-console.log(ref.input.textContent === ('Ukraine'));
+
 ref.input.addEventListener('input', debounce(searchCountry, DEBOUNCE_DELAY));
 
 function searchCountry(e) {
@@ -37,7 +37,7 @@ function searchCountry(e) {
         }
       })
       .catch(() => {
-        clearMarkup();
+        clearHtml();
         Notiflix.Notify.failure('Oops, there is no country with that name.');
       });
   }
@@ -52,8 +52,11 @@ function createCountryList(countries) {
                 </li>`;
     })
     .join('');
+
   ref.list.innerHTML = markup;
 }
+
+
 function createCountry(countries) {
   console.log(countries);
   const markup = countries
