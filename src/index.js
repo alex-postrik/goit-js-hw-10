@@ -34,8 +34,10 @@ function searchCountry(e) {
       } else if (data.length === 1) {
         createCountry(data);
       }
+    }).catch(() => {
+      clearMarkup();
+      Notiflix.Notify.failure('Oops, there is no country with that name.');
     });
-  }
 }
 
 function createCountryList(countries) {
