@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+#search-box {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  font: inherit;
+  padding: 8px;
+  max-width: 320px;
+  margin-bottom: 16px;
+/* ================= */
+  background: none;
+  border: none;
+  outline: none;
+  max-width: 190px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 9999px;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  color: #ffffff;
+}
+
+#search-box:hover {
+max-width: 400px;
+transition: (0.215, 0.610, 0.355, 1);
+} 
+
+#search-box {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+ /* outline-color: white; */
+ color:;
+ place-content: "Enter your message!";
+}
+
+.country-list {
+  display: flex;
+  gap: 20px;
+
+}
+.country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 350px;
+  min-height: 400px;
+
+  padding: auto;
+
+  margin: auto;
+  padding: 25px;
+  background: #9FAAAF;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.422) 0px -23px 25px 0px inset, rgba(1, 1, 1, 0.23) 0px -36px 30px 0px inset, rgba(3, 3, 3, 0.085) 0px -79px 40px 0px inset, rgba(5, 5, 5, 0.121) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.368) 0px 8px 4px, rgba(0, 0, 0, 0.334) 0px 16px 8px, rgba(4, 4, 4, 0.486) 0px 32px 16px;
+}
+
+.country-item  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.country-image {
+  width: 200px;
+}
+.country-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
