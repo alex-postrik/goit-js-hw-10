@@ -21,23 +21,26 @@ function searchCountry(e) {
 
   clearHtml();
   if (trimValue !== '') {
-    fetchCountries(trimValue).then(data => {
-      if (data.length > 10) {
-        Notiflix.Notify.info(
-          'Too many matches found. Please enter a more specific name.'
-        );
-      } else if (data.length === 0) {
-        Notiflix.Notify.failure('Oops, there is no country with that name');
-      } else if (data.length >= 2 && data.length <= 10) {
-        Notiflix.Notify.success('OK');
-        createCountryList(data);
-      } else if (data.length === 1) {
-        createCountry(data);
-      }
-    }).catch(() => {
-      clearMarkup();
-      Notiflix.Notify.failure('Oops, there is no country with that name.');
-    });
+    fetchCountries(trimValue)
+      .then(data => {
+        if (data.length > 10) {
+          Notiflix.Notify.info(
+            'Too many matches found. Please enter a more specific name.'
+          );
+        } else if (data.length === 0) {
+          Notiflix.Notify.failure('Oops, there is no country with that name');
+        } else if (data.length >= 2 && data.length <= 10) {
+          Notiflix.Notify.success('OK');
+          createCountryList(data);
+        } else if (data.length === 1) {
+          createCountry(data);
+        }
+      })
+      .catch(() => {
+        clearMarkup();
+        Notiflix.Notify.failure('Oops, there is no country with that name.');
+      });
+  }
 }
 
 function createCountryList(countries) {
